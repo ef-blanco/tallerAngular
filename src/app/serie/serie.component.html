@@ -1,3 +1,32 @@
-<p>
-  serie works!
-</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <div class="col-6">
+    <table class="table table-active">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Channel</th>
+                <th scope="col">Seasons</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of series">
+            <th scope="row">{{s.id}}</th>
+            <button type="button" class="btn btn-link">{{s.name}}</button>
+            <td>{{s.channel}}</td>
+            <td>{{s.seasons}}</td>
+          </tr>
+        </tbody>
+    </table>
+    <div class="row justify-content-start">
+        <h6 class="col-4">Seasons average:</h6>
+        <h6 class="col-2" id="avrgSeasons"></h6>
+    </div>
+</div>
+</body>
